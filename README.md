@@ -4,17 +4,18 @@
 Smart Recipe Explorer is a full-stack web application designed to help users manage their recipes, search with various filters, and utilize Generative AI (Google Gemini) to suggest new recipes based on available ingredients or simplify complex recipe instructions.
 
 ## Features
-- **Recipe Management:** Create and store recipes.
-- **Advanced Search:** Filter by cuisine, vegetarian preference, max prep time, ingredients, and tags.
+- **Recipe Management:** Create and store recipes. Form fields clear automatically upon successful creation!
+- **Advanced Search:** Filter by recipe name, cuisine, vegetarian preference, max prep time, ingredients, and tags.
+- **List All:** View your entire recipe database with a single click.
 - **AI Recipe Suggestion:** Input a list of ingredients and let AI generate a recipe for you!
-- **AI Simplification:** Turn long, complex recipe procedures into simple, beginner-friendly bullet points.
+- **AI Simplification:** Chain AI outputs natively in the UI to turn your generated complex procedures into simple, beginner-friendly bullet points.
 - **RESTful API:** Robust FastAPI backend backing the application.
 - **Modern UI:** Built with Streamlit for a fast and clean user experience.
 
 ## Tech Stack
-- **Backend Framework:** FastAPI
+- **Backend Framework:** FastAPI & Uvicorn
 - **Frontend:** Streamlit
-- **AI Service:** Google Gemini API (`google-generativeai`)
+- **AI Service:** LangChain & Google Gemini 2.5 Flash API (`langchain-google-genai`)
 - **Database:** SQLite with SQLAlchemy ORM
 - **Environment Management:** `python-dotenv`
 - **Testing:** `pytest` and FastAPI `TestClient`
@@ -47,16 +48,17 @@ smart_recipe_explorer/
 
 ### 1. Clone the repository and navigate to the project directory
 ```bash
-cd smart_recipe_explorer
+git clone https://github.com/elrath017/Smart-Recipe-Explorer.git
+cd Smart-Recipe-Explorer
 ```
 
 ### 2. Create a Virtual Environment (Optional but recommended)
 ```bash
-python -m venv venv
+python -m venv myenv
 # On Windows:
-venv\Scripts\activate
+myenv\Scripts\activate
 # On macOS/Linux:
-source venv/bin/activate
+source myenv/bin/activate
 ```
 
 ### 3. Install Requirements
